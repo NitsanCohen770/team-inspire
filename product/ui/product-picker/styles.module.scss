@@ -1,0 +1,10 @@
+.conatiner {
+  display: flex;
+  justify-content: space-around;
+}
+
+.viewer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

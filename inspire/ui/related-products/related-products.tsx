@@ -9,8 +9,8 @@ export function RelatedProducts({ images }: RelatedProductsProps) {
   return (
     <div className={styles.container}>
       <span>Related Products</span>
-      {images.map((image) => (
-        <img key={image} src={require(`./images/${image}.jpg`)} />
+      {images?.map((image) => (
+        <img key={image} src={image} />
       ))}
     </div>
   );

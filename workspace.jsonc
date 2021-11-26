@@ -69,8 +69,14 @@
    * see https://harmony-docs.bit.dev/aspects/variants for more info.
    **/
   "teambit.workspace/variants": {
-    "{ui/**}": {
+    "product, inspire,{ ui/**}": {
       "teambit.react/react": {}
+    },
+    "product": {
+      "defaultScope": "nitsan770.product"
+    },
+    "checkout": {
+      "defaultScope": "nitsan770.checkout"
     },
     "{content/**}": {
       "teambit.mdx/mdx": {}
