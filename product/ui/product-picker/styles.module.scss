@@ -1,10 +1,14 @@
-.conatiner {
+.container {
   display: flex;
   justify-content: space-around;
 }
 
-.viewer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.img {
+  height: 104px;
+  width: 104px;
+  cursor: pointer;
+  &:hover,
+  &.active {
+    border-bottom: 2px solid seagreen;
+  }
 }

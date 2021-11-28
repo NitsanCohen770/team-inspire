@@ -1,16 +1,13 @@
 import React from 'react';
+import styles from './styles.module.scss';
 
 export type TitleProps = {
   /**
    * a text to be rendered in the component.
    */
-  text: string
+  text: string;
 };
 
 export function Title({ text }: TitleProps) {
-  return (
-    <div>
-      {text}
-    </div>
-  );
+  return <h1 className={styles.title}>{text}</h1>;
 }

@@ -1,15 +1,25 @@
+import { useTractorStoreContext } from '@nitsan770/product.context.tractor-context';
 import React from 'react';
 import styles from './styles.module.scss';
+import * as relatedImages from './related-images';
 
-export type RelatedProductsProps = {
-  images: string[];
-};
-
-export function RelatedProducts({ images }: RelatedProductsProps) {
+export function RelatedProducts() {
+  const {
+    selectedProduct: { category },
+  } = useTractorStoreContext();
+  const renderImages = (() => {
+    if (category === 'great')
+      return [relatedImages.img1, relatedImages.img2, relatedImages.img3];
+    if (category === 'wonderful')
+      return [relatedImages.img4, relatedImages.img5, relatedImages.img6];
+    if (category === 'awesome')
+      return [relatedImages.img7, relatedImages.img8, relatedImages.img9];
+  })();
+  console.log(category);
   return (
     <div className={styles.container}>
       <span>Related Products</span>
-      {images?.map((image) => (
+      {renderImages.map((image) => (
         <img key={image} src={image} />
       ))}
     </div>

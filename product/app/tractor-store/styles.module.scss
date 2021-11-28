@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+}
+.right_side {
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex_end {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.side {
+}

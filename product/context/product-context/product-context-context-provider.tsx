@@ -7,14 +7,19 @@ import {
 export type ProductsContextProps<TItemType> = {
   idFieldName: string;
   context: React.Context<ProductsContextType<TItemType>>;
+  products: TItemType[];
 } & HTMLAttributes<HTMLDivElement>;
 
 export function ProductsContextProvider<TItemType>({
   children,
   idFieldName = 'id',
+  products,
   context,
 }: ProductsContextProps<TItemType>) {
   const [cart, setCart] = useState<ProductsListItem<TItemType>[]>([]);
+  const [selectedProduct, setSelectedProduct] = useState<TItemType>(
+    products[0]
+  );
 
   function findInCart(item: TItemType): number {
     return cart.findIndex((p) => p.item[idFieldName] === item[idFieldName]);
@@ -52,10 +57,17 @@ export function ProductsContextProvider<TItemType>({
     }
   };
 
+  const selectProduct = (selectedProduct: TItemType) => {
+    setSelectedProduct(selectedProduct);
+  };
+
   const contextValue: ProductsContextType<TItemType> = {
+    products,
     cart,
     removeFromCart,
     addToCart,
+    selectProduct,
+    selectedProduct,
   };
 
   return <context.Provider value={contextValue}>{children}</context.Provider>;

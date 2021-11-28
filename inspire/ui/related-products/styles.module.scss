@@ -1,12 +1,17 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   border-left: 2px dashed black;
   > span:first-child {
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    font-size: xx-large;
+    font-size: 1.5em;
+  }
+  > img {
+    height: 180px;
+    width: 180px;
   }
 }

@@ -29,7 +29,8 @@ const MockFavesDisplay = () => {
       {context.cart.map((cartItem) => {
         return (
           <div>
-            {cartItem.item.name} - Price: <strong>{cartItem.item.price}</strong>
+            {cartItem.item.title} - Price:{' '}
+            <strong>{cartItem.item.price}</strong>
             <span>quantity:{cartItem.quantity}</span>
             <button onClick={() => context.removeFromCart(cartItem)}>
               Remove
@@ -43,7 +44,11 @@ const MockFavesDisplay = () => {
 
 export const BasicThemeUsage = () => {
   return (
-    <ProductsContextProvider<Product> idFieldName="id" context={contextObject}>
+    <ProductsContextProvider<Product>
+      idFieldName="id"
+      context={contextObject}
+      products={[]}
+    >
       <MockUpdateContextComponent />
       <MockFavesDisplay />
     </ProductsContextProvider>

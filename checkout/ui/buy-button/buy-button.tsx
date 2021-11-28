@@ -1,3 +1,4 @@
+import { useTractorStoreContext } from '@nitsan770/product.context.tractor-context';
 import React from 'react';
 import styles from './styles.module.scss';
 
@@ -9,5 +10,11 @@ export type BuyButtonProps = {
 };
 
 export function BuyButton({ text }: BuyButtonProps) {
-  return <div className={styles.button}>{text}</div>;
+  const selectedProduct = useTractorStoreContext()?.selectedProduct;
+  const addToCart = useTractorStoreContext()?.addToCart;
+  return (
+    <div onClick={() => addToCart(selectedProduct)} className={styles.button}>
+      {`${text} ${selectedProduct?.price} $`}{' '}
+    </div>
+  );
 }

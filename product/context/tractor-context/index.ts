@@ -1,3 +1,3 @@
-export { TractorStoreContext, useTractorStoreContext } from './tractor-context-context';
+export { TractorStoreContext, useTractorStoreContext, TractorStoreContextProvider } from './tractor-context-context';
 
 

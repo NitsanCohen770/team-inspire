@@ -57,11 +57,23 @@
         "mainFile": "index.ts",
         "rootDir": "checkout/ui/buy-button"
     },
+    "ui/product-image": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "product/ui/product-image"
+    },
     "ui/product-picker": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
         "rootDir": "product/ui/product-picker"
+    },
+    "ui/product-title": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "product/ui/product-title"
     },
     "ui/title": {
         "scope": "",
