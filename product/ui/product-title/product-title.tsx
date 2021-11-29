@@ -3,13 +3,14 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 export function ProductTitle() {
-  const productTitle =
-    useTractorStoreContext().selectedProduct?.title?.split(' ');
+  const {
+    selectedProduct: { title },
+  } = useTractorStoreContext();
 
   return (
     <div className={styles.text}>
-      <strong className={styles.bold}>{productTitle && productTitle[0]}</strong>{' '}
-      <small>{productTitle?.slice(1)?.join(' ')}</small>
+      <strong className={styles.bold}>{title.split(' ')[0]}</strong>{' '}
+      <small>{title.split(' ').slice(1)?.join(' ')}</small>
     </div>
   );
 }

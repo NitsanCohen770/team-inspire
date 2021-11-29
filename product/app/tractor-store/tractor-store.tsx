@@ -28,7 +28,7 @@ export function TractorStore() {
           </div>
         </div>
         <div className={styles.side}>
-          <RelatedProducts images={['2', '3']} />
+          <RelatedProducts />
         </div>
       </div>
     </TractorStoreContextProvider>

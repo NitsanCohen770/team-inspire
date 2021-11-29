@@ -15,7 +15,7 @@ export function RelatedProducts() {
     if (category === 'awesome')
       return [relatedImages.img7, relatedImages.img8, relatedImages.img9];
   })();
-  console.log(category);
+
   return (
     <div className={styles.container}>
       <span>Related Products</span>
