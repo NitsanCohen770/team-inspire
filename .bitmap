@@ -11,7 +11,7 @@
 {
     "app/tractor-store": {
         "scope": "nitsan770.product",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "product/app/tractor-store"
     },
@@ -22,8 +22,8 @@
         "rootDir": "product/context/tractor-context"
     },
     "generic-component": {
-        "scope": "",
-        "version": "",
+        "scope": "nitsan770.inspire",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "inspire/generic-component"
     },
@@ -41,7 +41,7 @@
     },
     "related-products": {
         "scope": "nitsan770.inspire",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "inspire/ui/related-products"
     },
@@ -64,8 +64,8 @@
         "rootDir": "checkout/ui/buy-button"
     },
     "ui/currency": {
-        "scope": "",
-        "version": "",
+        "scope": "nitsan770.checkout",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "checkout/ui/currency"
     },
@@ -83,7 +83,7 @@
     },
     "ui/product-title": {
         "scope": "nitsan770.product",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "product/ui/product-title"
     },
